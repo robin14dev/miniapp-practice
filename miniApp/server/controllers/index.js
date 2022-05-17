@@ -8,7 +8,7 @@ module.exports = {
    post : (req, res) => {
      //console.log('what is req', req.body.coord);
       const {latitude, longitude} = req.body.coord
-    axios.post(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=fd311e412081c008c4d072fda8bca167&units=metric`)
+    axios.post(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKEY}&units=metric`)
     .then(result => {
       // console.log(result.data.main.temp);
       // console.log('description??',result.data.weather[0].description); // clear sky
