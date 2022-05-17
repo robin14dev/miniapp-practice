@@ -1,14 +1,15 @@
 CREATE TABLE users (
   id INT AUTO_INCREMENT,
-  email VARCHAR(30),
+  infoId VARCHAR(30),
   password varchar(255),
   nickname varchar(255),
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
+  updated_at datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
 CREATE TABLE logs (
   id INT AUTO_INCREMENT,
-  user_nickname varchar(255),
+  user_id varchar(255),
   weatherStatus varchar(255),
   temperature INT,
   location VARCHAR(20),
@@ -17,7 +18,7 @@ CREATE TABLE logs (
 );
 CREATE TABLE advices (
   id INT AUTO_INCREMENT,
-  weatherStatus varchar(255),
+  logs_weatherStatus varchar(255),
   icon VARCHAR(20),
   message varchar(255),
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
